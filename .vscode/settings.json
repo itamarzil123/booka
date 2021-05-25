@@ -1,0 +1,8 @@
+{
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "tabWidth": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": ["source.fixAll.format", "source.fixAll.eslint"],
+  "typescript.validate.enable": true
+}

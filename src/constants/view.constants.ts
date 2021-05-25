@@ -1,0 +1,11 @@
+export const ViewMods = {
+  INITIAL: 'INITIAL',
+  STANDARD: 'STANDARD',
+  WISH_LIST: 'WISH_LIST'
+};
+
+export const SortingStrategies = {
+  FROM_NEWEST_TO_OLDEST: 'FROM_NEWEST_TO_OLDEST',
+  FROM_OLDEST_TO_NEWEST: 'FROM_OLDEST_TO_NEWEST',
+  NONE: 'NONE'
+};

@@ -1,0 +1,7 @@
+.box-container {
+  margin: var(--box-margin);
+  padding: var(--box-padding);
+  background-color: var(--box-bg);
+  border: var(--box-border__size) solid var(--box-border__color);
+  border-radius: var(--box-border__radius);
+}

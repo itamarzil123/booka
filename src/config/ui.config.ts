@@ -1,0 +1,5 @@
+export const FETCH_POLICY = {
+  ITEMS_PER_PAGE: 20,
+  REQUEST_LIMIT: 20,
+  DEBOUNCE_DELAY: 600
+};

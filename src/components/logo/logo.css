@@ -1,0 +1,23 @@
+.logo-image__container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-description {
+  display: flex;
+  justify-content: center;
+  font-family: var(--primary-font-family);
+  font-weight: 600;
+  letter-spacing: 5px;
+  font-size: 2em;
+}
+
+.logo-subdescription {
+  display: flex;
+  justify-content: center;
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  letter-spacing: 5px;
+  font-size: 1em;
+  text-transform: capitalize;
+}

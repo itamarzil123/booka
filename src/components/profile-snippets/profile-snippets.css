@@ -1,0 +1,6 @@
+.snippets {
+  text-transform: capitalize;
+  font-family: var(--fourth-font-family);
+  font-size: 0.8em;
+  color: rgb(18, 19, 18);
+}

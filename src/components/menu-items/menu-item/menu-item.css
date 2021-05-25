@@ -1,0 +1,27 @@
+.menu-item-title {
+  font-family: var(--secondary-font-family);
+  font-size: 0.9em;
+  color: black;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.menu-item-title:hover {
+  color: #682f68;
+  transition: all 0.3s ease;
+}
+
+.menu-item-container {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item-icon {
+  background-image: url('../../../assets/home.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+}

@@ -1,0 +1,200 @@
+.auth-page__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box {
+  padding: 2% 2%;
+  margin-top: 20px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  background-color: white;
+}
+
+@media (max-width: 780px) {
+  .form-box {
+    padding: 2% 2%;
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: none;
+  }
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+.form-title {
+  letter-spacing: 5px;
+  text-transform: capitalize;
+  margin-bottom: 0.7em;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-family: var(--primary-font-family);
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 400;
+}
+
+.form-label {
+  position: absolute;
+  top: 12px;
+  left: 35px;
+  z-index: 1;
+  margin-bottom: 5%;
+  font-size: 1.2em;
+  font-weight: 400;
+
+  font-family: var(--primary-font-family);
+
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+.focused.form-label {
+  transform: translateY(-35%);
+  font-size: 1em;
+  color: var(--input-font__color);
+  font-weight: 600;
+}
+.form-submit__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-submit {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  font-family: var(--primary-font-family);
+
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+  border: 0.5px solid rgb(122, 121, 121);
+  font-size: 1em;
+  padding: 15px;
+  font-weight: 600;
+}
+.form-submit:hover {
+  transition: all 0.4s;
+  background-color: rgb(212, 209, 216);
+}
+
+.form-input {
+  position: relative;
+  width: 85%;
+  height: 50px;
+  padding: 27px 4px 11px 11px;
+  margin-bottom: 5px;
+  top: 0;
+  outline: none;
+  transition: box-shadow 150ms ease-out;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-family: var(--primary-font-family);
+  color: var(--input-font__color);
+}
+
+.form-input:focus {
+}
+
+.form-input.filled {
+  box-shadow: 0 2px 0 0 lightgreen;
+}
+
+.signup-description {
+  display: inline-block;
+}
+.signup-btn {
+  display: inline-block;
+  padding: 2px;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: 800;
+  color: #2e3b6d;
+  border-bottom: 1px solid #2e3b6d;
+  letter-spacing: 1px;
+}
+
+.signup-link {
+  margin-top: 35px;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: var(--primary-font-family);
+}
+
+.forgot-password__description {
+  display: inline-block;
+  margin-left: 8%;
+}
+.forgot-password__btn {
+  display: inline-block;
+  padding: 2px;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-left: 5px;
+  font-weight: 800;
+  color: #2e3b6d;
+  border-bottom: 1px solid #2e3b6d;
+  letter-spacing: 1px;
+}
+
+.forgot-password__link {
+  margin-top: 35px;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: var(--primary-font-family);
+}
+
+.form {
+  width: 100%;
+}
+
+.error-msg__container {
+  display: flex;
+  justify-content: left;
+  width: 90%;
+  margin-left: 8%;
+}
+.error-msg {
+  color: red;
+  font-weight: 600;
+  /* width: 85%;  */
+  /* max-width: 235px; */
+  word-wrap: break-word;
+}

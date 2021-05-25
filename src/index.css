@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 400px;
+  min-height: 490px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: var(--homepage-bg);
+}
+
+.app-container {
+  width: 100%;
+}
+
+:root {
+  --white: #ffffffff;
+  --homepage-bg: #ffffff;
+  --box-bg: #f0ecec;
+  --box-border__color: #cec9c9;
+
+  --box-border__radius: 10px;
+  --box-border__size: 1px;
+  --box-padding: 25px;
+  --box-margin: 0;
+  --search-bar__bg: #c0bbbb;
+  --search-bar__color: #000000;
+
+  --input-font__color: rgb(68, 70, 70);
+  --footer-bg: #fff4f8;
+  --book-margin: 0px 30px;
+  --menu-item-margin: 20px;
+  --menu-item-font-size: 0.7em;
+
+  /* FONTS */
+  --primary-font-family: 'Roboto', sans-serif;
+  --secondary-font-family: 'Nanum Myeongjo', serif;
+  --third-font-family: 'Open Sans', sans-serif;
+  --fourth-font-family: 'PT Sans', sans-serif;
+}
