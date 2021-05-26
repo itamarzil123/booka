@@ -62,10 +62,13 @@ function BooksPagination() {
   };
   const renderBooksOrWishlist =
     state.viewMod === ViewMods.WISH_LIST ? <Wishlist /> : <Books />;
+
+  const renderPaginationOrNot =
+    state.viewMod === ViewMods.WISH_LIST ? state.wishList : books;
   return (
     <Container>
       {renderBooksOrWishlist}
-      {books && (
+      {renderPaginationOrNot && (
         <Pagination
           activePage={state.activePage}
           itemsPerPage={FETCH_POLICY.ITEMS_PER_PAGE}

@@ -25,10 +25,7 @@ export const useWishlist = ({ onCompleted, onError }: Props) => {
     // });
     getBooksByIds(state.wishList).then((books: IBook[]) => {
       const filteredBooks = filterBooksByText(books, state.currentSearchBarTex);
-      // dispatch({
-      //   type: 'SET_IS_LOADING',
-      //   payload: false
-      // });
+
       setWishListBooks(filteredBooks);
     });
   }, [state.viewMod, state.wishList, state.currentSearchBarText]);

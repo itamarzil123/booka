@@ -8,16 +8,17 @@ a React search component with pagination and caching (React-Query), using the go
 
 ## APP_CONFIGURATION:
 
-Configuration files are names someFile.config.ts and determine the application configuration.
+Configuration files for the application can be found at file-name.config.ts
 
-env.config.ts:
-MOD: TEST
-which means the data is MOCK data and the google API is OFF by default
-best while coding and not depending on the books google API to work / fetch limitations (there is a limited amount
-of books you can fetch a day)
+in env.config.ts use:
+export const **ENV** = Environments.DEVELOPMENT; // for real api
+or use:
+export const **ENV** = Environments.TEST; // for mock api
+NOTE: with Environments.TEST (which is meant only for developers testing ui and never in production) please remember that you need to first clean your local wishlist (in local storage) because otherwise items with IDs that were added from real DATA do not have
+matching items in the local mock data, therefore leading to inconsistencies between number of items in wishlist and real items rendered
+in wishlist.
 
-    MOD: DEVELOPMENT/PRODUCTION
-        turn on google API, and real data fetching
+## RUNNING LOCALLY:
 
 npm install
 npm start
@@ -31,6 +32,10 @@ password: 'password'
 ## STATE_MANAGEMENT:
 
 React Context API
+
+## STORAGE:
+
+localStorage / sessionStorage
 
 ## STACK:
 

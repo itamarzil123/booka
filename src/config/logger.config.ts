@@ -5,7 +5,7 @@ export const Logger = {
   // MOD: ON
   MOD: ON,
   OPTIONS: {
-    STATE: ON,
-    API: OFF
+    STATE: OFF,
+    API: ON
   }
 };

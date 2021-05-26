@@ -68,10 +68,11 @@ export const getBookById = async (id: string) => {
     if (!response.data && !response.data.items) {
       return [];
     }
-    logger.info(LogTypes.API, 'getBookById data:', response.data);
     const filteredData = response.data.items.filter(
       (book: IBook): boolean => book.id === id
     );
+    logger.info(LogTypes.API, 'getBookById filtered data:', filteredData);
+
     return filteredData[0];
   } else if (
     __ENV__ === Environments.PRODUCTION ||
@@ -97,9 +98,10 @@ export const getBooksByIds = async (ids: string[]) => {
       return book;
     })
   );
-  logger.info(LogTypes.API, 'getBookByIds data:', books);
+  const validBooks = books.filter((a) => a);
+  logger.info(LogTypes.API, 'getBookByIds data:', validBooks);
 
-  return books;
+  return validBooks;
 };
 
 export const getBooksByCategory = async (
