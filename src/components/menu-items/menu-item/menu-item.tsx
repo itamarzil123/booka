@@ -29,14 +29,6 @@ const MenuItemContainer = styled.div<{
         transform: scale(0);
       }
     `}
-  ${({ isSelected }) =>
-    isSelected &&
-    css`
-      &:after {
-        opacity: 1;
-        transform: scale(1);
-      }
-    `}
 `;
 
 const MenuItemIcon = styled.div<{
@@ -72,10 +64,10 @@ const MenuItemIcon = styled.div<{
       ? 'invert(0%) sepia(97%) saturate(0%) hue-rotate(47deg) brightness(99%) contrast(103%);'
       : 'invert(29%) sepia(4%) saturate(16%) hue-rotate(18deg) brightness(96%) contrast(89%);'};
 
-  &:hover {
+  /* &:hover {
     filter: invert(0%) sepia(97%) saturate(0%) hue-rotate(47deg) brightness(99%)
       contrast(103%);
-  }
+  } */
 `;
 const MenuItemTitle = styled.div<{ isSelected: boolean }>`
   font-family: var(--secondary-font-family);
@@ -85,9 +77,9 @@ const MenuItemTitle = styled.div<{ isSelected: boolean }>`
   color: black;
   cursor: pointer;
   text-transform: capitalize;
-  &:hover {
+  /* &:hover {
     font-weight: 600;
-  }
+  } */
 `;
 
 type Props = {
@@ -138,7 +130,7 @@ function MenuItem({
       withUnderline={withUnderline}
       isSelected={selected}
     >
-      <MenuItemIcon
+      {/* <MenuItemIcon
         isSelected={selected}
         icon={icon}
         width={width}
@@ -148,7 +140,7 @@ function MenuItem({
         right={right}
         transform={transform}
         marginLeft={marginLeft}
-      ></MenuItemIcon>
+      ></MenuItemIcon> */}
       <MenuItemTitle isSelected={selected}>{title}</MenuItemTitle>
       {children}
     </MenuItemContainer>

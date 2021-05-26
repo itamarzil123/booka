@@ -11,11 +11,10 @@ const ItemsContainer = styled.div<{ hamburgerSelected: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 38%;
   user-select: none;
   @media (max-width: 650px) {
-    display: ${(props) => (props.hamburgerSelected ? `none` : `none`)};
-    flex-direction: ${(props) => (props.hamburgerSelected ? `column` : `row`)};
+    display: ${(props) => (props.hamburgerSelected ? 'none' : 'none')};
+    flex-direction: ${(props) => (props.hamburgerSelected ? 'column' : 'row')};
   }
 `;
 
@@ -32,7 +31,7 @@ const WishlistAmount = styled.div`
   position: absolute;
   width: 17px;
   height: 16px;
-  background-color: #eabcbc;
+  background-color: var(--pink);
   border-radius: 50%;
   top: 38px;
   right: -18px;
@@ -76,7 +75,7 @@ function MenuItems({ loggedInUser, hamburgerSelected }: Props) {
           withUnderline={true}
           handleClick={handleClickFavorites}
         >
-          <WishlistAmount>{state.wishList?.length}</WishlistAmount>
+          {/* <WishlistAmount>{state.wishList?.length}</WishlistAmount> */}
         </MenuItem>
 
         <MenuItem

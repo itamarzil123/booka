@@ -85,9 +85,9 @@ function Books() {
 
   const DefaultBooks = () => (
     <>
-      <Separator title={'Drama'} />
+      {/* <Separator title={'Drama'} /> */}
       {renderBooks(0, 4)}
-      <Separator title={'Adventure'} />
+      {/* <Separator title={'Adventure'} /> */}
       {renderBooks(5, 9)}
     </>
   );

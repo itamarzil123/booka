@@ -5,8 +5,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  min-width: 400px;
-  min-height: 490px;
+  min-width: 600px;
+  min-height: 650px;
 }
 
 *,
@@ -27,8 +27,13 @@ body {
 
 :root {
   --white: #ffffffff;
+  --pink1: #eabcbc;
+  --grey1: #dad6d6;
+  --grey2: #e6e6e6;
   --homepage-bg: #ffffff;
   --box-bg: #f0ecec;
+  --box-bg: #ffffff;
+
   --box-border__color: #cec9c9;
 
   --box-border__radius: 10px;
@@ -36,17 +41,29 @@ body {
   --box-padding: 25px;
   --box-margin: 0;
   --search-bar__bg: #c0bbbb;
-  --search-bar__color: #000000;
+  --search-bar__bg: #ffffff;
+  --search-bar__border__color: black;
 
+  --search-bar__color: #000000;
+  --filters-font-color: black;
+  --filters-letter-spacing: 0.05em;
+  --filters-padding: 0px 10px;
   --input-font__color: rgb(68, 70, 70);
   --footer-bg: #fff4f8;
   --book-margin: 0px 30px;
   --menu-item-margin: 20px;
-  --menu-item-font-size: 0.7em;
 
   /* FONTS */
   --primary-font-family: 'Roboto', sans-serif;
   --secondary-font-family: 'Nanum Myeongjo', serif;
   --third-font-family: 'Open Sans', sans-serif;
   --fourth-font-family: 'PT Sans', sans-serif;
+
+  --menu-item-font-size: 1em;
+
+  --filters-font-size: 1em;
+  --filters-font-weight: 600;
+
+  /* BORDERS */
+  --border-light: 1px solid black;
 }

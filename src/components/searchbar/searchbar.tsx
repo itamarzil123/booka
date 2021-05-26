@@ -9,15 +9,52 @@ import { getBooksByCategory } from '../../services/rest/book.service';
 import SearchInput from './search-input';
 import './searchbar.css';
 import { categoryItems } from '../../config/menus.config';
+import { IMAGES } from '../../constants/image.constants';
 
 const SearchBarInputContainer = styled.div<{ isFocused?: boolean; ref?: any }>`
   display: flex;
-  padding: 5px 15px;
+  align-items: center;
   ${(props) => props.isFocused && 'box-shadow: #d6d6d6 0px 5px 5px 0px;'};
   font-family: var(--primary-font-family);
+  font-size: var(--filters-font-size);
+  color: var(--filters-font-color);
+  letter-spacing: var(--filters-letter-spacing);
   @media (max-width: 650px) {
     display: block;
   }
+`;
+
+const SearchIconContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+`;
+const SearchIcon = styled.div<{
+  width?: number;
+  height?: number;
+  imgUrl: string;
+}>`
+  /* position: absolute; */
+  background-image: ${(props) => `url("${props.imgUrl}")`};
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* top: 23px;
+  left: 190px; */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`;
+
+const SearchInputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  /* height: 70%; */
+  border: 1px solid var(--search-bar__border__color);
+  border-radius: 5px;
+
+  height: 60%;
 `;
 
 type Props = {
@@ -93,13 +130,18 @@ function SearchBar({ loggedInUser }: Props) {
         ref={ref}
         onClick={(e) => handleClick(e)}
       >
-        <SearchInput
-          placeholder="Search Booka.."
-          value={state.currentSearchBarText}
-          onChange={handleSearchChange}
-          onClick={(e) => handleClick(e)}
-        />
-        <div className="search-icon"></div>
+        <SearchInputContainer>
+          <SearchInput
+            placeholder="Search Booka.."
+            value={state.currentSearchBarText}
+            onChange={handleSearchChange}
+            onClick={(e) => handleClick(e)}
+          />
+          <SearchIconContainer>
+            <SearchIcon imgUrl={IMAGES.searchIcon} />
+          </SearchIconContainer>
+        </SearchInputContainer>
+
         <Dropdown
           menuItems={categoryItems}
           padding={'0px 15px'}

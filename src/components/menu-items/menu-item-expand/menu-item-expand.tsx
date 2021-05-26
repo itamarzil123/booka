@@ -8,8 +8,10 @@ import { SyntheticEvent } from 'react';
 import { IUser } from '../../../types/user';
 
 const MenuItemDropDownContainer = styled.div<{ ref: any }>`
+  display: flex;
+  justify-content: center;
   position: relative;
-  margin-left: 20px;
+  margin-left: var(--menu-item-margin);
   margin-bottom: 15px;
 `;
 const Popup = styled.div<{ show: boolean }>`
@@ -20,10 +22,11 @@ const Popup = styled.div<{ show: boolean }>`
   right: 0px;
   width: 130px;
   height: 100px;
-  margin: 10px 0;
+  margin: 40px 0;
   display: ${(props) => (props.show ? 'flex' : 'none')};
-  box-shadow: 0 0 4px #666;
-  background-color: #b29c9c;
+  /* box-shadow: 0 0 4px #666; */
+  border: var(--border-light);
+  background-color: var(--white);
   color: #161313;
   flex-direction: column;
   justify-content: center;

@@ -11,6 +11,7 @@ import starEmptyIcon from '../assets/star-empty.svg';
 import chevronIcon from '../assets/chevron.svg';
 import avatarIcon from '../assets/avatar.svg';
 import hamburgerIcon from '../assets/hamburger.svg';
+import searchIcon from '../assets/searchicon.png';
 import logo from '../assets/logo_fun1.svg';
 
 export const MAX_POST_IMAGE_SIZE = 3000000;
@@ -30,6 +31,7 @@ export const IMAGES = {
   chevronIcon,
   avatarIcon,
   hamburgerIcon,
+  searchIcon,
   logo,
   logoWithoutDescription
 };

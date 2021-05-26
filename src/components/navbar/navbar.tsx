@@ -10,8 +10,7 @@ import { useState } from 'react';
 const Container = styled.div`
   height: 10%;
   display: flex;
-
-  align-items: center;
+  justify-content: space-between;
   background-color: var(--box-bg);
   border: none;
   border-bottom: var(--box-border__size) solid var(--box-border__color);
@@ -43,6 +42,10 @@ const ResponsiveItem = styled.div`
   cursor: pointer;
 `;
 
+const NavbarLeft = styled.div`
+  display: flex;
+`;
+
 type Props = {
   loggedInUser: IUser;
 };
@@ -57,15 +60,19 @@ function Navbar({ loggedInUser }: Props) {
           hamburgerSelected={hamburgerSelected}
           setHamburgerSelected={setHamburgerSelected}
         />
-        <Logo
-          width={160}
-          height={80}
-          marginBottom={0}
-          marginLeft={0}
-          text={''}
-          imgUrl={IMAGES.logoWithoutDescription}
-        />
-        <SearchBar loggedInUser={loggedInUser} />
+
+        <NavbarLeft>
+          <Logo
+            width={160}
+            height={68}
+            marginBottom={0}
+            marginLeft={0}
+            text={''}
+            imgUrl={IMAGES.logoWithoutDescription}
+          />
+          <SearchBar loggedInUser={loggedInUser} />
+        </NavbarLeft>
+
         <MenuItems
           loggedInUser={loggedInUser}
           hamburgerSelected={hamburgerSelected}

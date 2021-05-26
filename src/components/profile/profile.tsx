@@ -23,6 +23,14 @@ const UserProfileAndName = styled.div<{
   font-size: var(--menu-item-font-size);
 `;
 
+const ProfileName = styled.div`
+  font-family: var(--primary-font-family);
+  font-size: var(--menu-item-font-size);
+  color: black;
+  cursor: pointer;
+  text-transform: capitalize;
+`;
+
 type Props = {
   username: string | undefined;
   userImage: any;
@@ -95,7 +103,7 @@ function Profile({
           width={width}
           height={height}
         >
-          {userImage ? (
+          {/* {userImage ? (
             <Photo
               width={profilePhotoSize}
               height={profilePhotoSize}
@@ -103,8 +111,8 @@ function Profile({
             />
           ) : (
             <DummyIcon profilePhotoSize={profilePhotoSize} />
-          )}
-          <div className="profile-name">{getUserFullName()}</div>
+          )} */}
+          <ProfileName>{getUserFullName()}</ProfileName>
         </UserProfileAndName>
       </div>
       <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>

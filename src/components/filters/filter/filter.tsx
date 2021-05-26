@@ -10,8 +10,8 @@ const Container = styled.div`
 
 const Title = styled.div`
   font-family: var(--primary-font-family);
-  font-size: 0.8em;
-  font-weight: 600;
+  font-size: var(--filters-font-size);
+  font-weight: var(--filters-font-weight);
   margin-bottom: 5px;
 `;
 

@@ -19,7 +19,7 @@
 
 .profile-name {
   font-family: var(--primary-font-family);
-  font-size: 0.9em;
+  font-size: var(--menu-item-font-size);
   color: black;
   margin: 2px 15px;
   cursor: pointer;

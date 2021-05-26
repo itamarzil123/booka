@@ -19,7 +19,9 @@ const Title = styled.div`
   padding: 0px 15px;
   text-transform: uppercase;
   font-family: var(--primary-font-family);
-  background-color: #d1a7ac;
+  background-color: var(--pink1);
+  background-color: var(--grey1);
+
   letter-spacing: 0.05em;
 `;
 

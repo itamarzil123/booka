@@ -2,17 +2,21 @@ import styled from 'styled-components';
 
 const SearchBarInput = styled.input`
   border: none;
-  border-radius: 5px;
   background-color: var(--search-bar__bg);
-  padding: 12px 25px;
+  /* height: 70%; */
   height: 100%;
-  font-size: 0.9em;
-  letter-spacing: 1px;
+  padding: var(--filters-padding);
+  font-family: var(--primary-font-family);
+  font-size: var(--filters-font-size);
+  font-weight: var(--filters-font-weight);
+  color: var(--filters-font-color);
+  letter-spacing: var(--filters-letter-spacing);
   outline: none;
   ::placeholder,
   ::-webkit-input-placeholder {
-    color: var(--search-bar__color);
+    color: var(--filters-font-color);
   }
+  /* border: 1px solid var(--search-bar__border__color); */
 `;
 
 type Props = {
