@@ -144,16 +144,16 @@ export const getBooksSorted = async (
 
       comparator = function (left: any, right: any) {
         return moment
-          .utc(left.volumeInfo.publishedDate.timeStamptimeStamp)
-          .diff(moment.utc(right.volumeInfo.publishedDate.timeStamptimeStamp));
+          .utc(left.volumeInfo.publishedDate)
+          .diff(moment.utc(right.volumeInfo.publishedDate));
       };
     } else if (strategy === 'oldest') {
       console.log('sorting by oldest');
 
       comparator = function (left: any, right: any) {
         return moment
-          .utc(right.volumeInfo.publishedDate.timeStamp)
-          .diff(moment.utc(left.volumeInfo.publishedDate.timeStamp));
+          .utc(right.volumeInfo.publishedDate)
+          .diff(moment.utc(left.volumeInfo.publishedDate));
       };
     } else if (strategy === 'all') {
       console.log('reset sorting');
