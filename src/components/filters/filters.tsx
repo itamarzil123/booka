@@ -49,6 +49,16 @@ function Filters() {
         });
         break;
       case 'all':
+        const updatedBooks2 = await getBooksSorted(
+          state.currentSearchBarText,
+          state.books,
+          sortByItems[1].title,
+          state.bookSearchStartIndex
+        );
+        dispatch({
+          type: 'SET_BOOKS',
+          payload: updatedBooks2
+        });
         dispatch({
           type: 'SET_SELECTED_FILTER',
           payload: null

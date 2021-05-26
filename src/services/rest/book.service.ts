@@ -6,6 +6,7 @@ import { generateUrl } from '../../utils/api.utils';
 import { FETCH_POLICY } from '../../config/ui.config';
 import { IBook } from '../../types/book';
 import { logger, LogTypes } from '../../utils/logger.utils';
+import moment from 'moment';
 
 export const filterBooksByText = (books: IBook[], text: string) => {
   if (!books) {
@@ -136,19 +137,31 @@ export const getBooksSorted = async (
 ) => {
   if (__ENV__ === Environments.TEST || __ENV__ === Environments.DEVELOPMENT) {
     const response = (await Promise.resolve(_books)) as any;
+    console.log('books before sort:', response);
     let comparator;
     if (strategy === 'newest') {
-      comparator = (firstItem: any, secondItem: any) =>
-        firstItem?.volumeInfo?.publishedDate >
-        secondItem?.volumeInfo?.publishedDate;
+      console.log('sorting by newest');
+
+      comparator = function (left: any, right: any) {
+        return moment
+          .utc(left.volumeInfo.publishedDate.timeStamptimeStamp)
+          .diff(moment.utc(right.volumeInfo.publishedDate.timeStamptimeStamp));
+      };
     } else if (strategy === 'oldest') {
-      comparator = (firstItem: any, secondItem: any) =>
-        firstItem?.volumeInfo?.publishedDate <
-        secondItem?.volumeInfo?.publishedDate;
+      console.log('sorting by oldest');
+
+      comparator = function (left: any, right: any) {
+        return moment
+          .utc(right.volumeInfo.publishedDate.timeStamp)
+          .diff(moment.utc(left.volumeInfo.publishedDate.timeStamp));
+      };
     } else if (strategy === 'all') {
+      console.log('reset sorting');
+
       return response;
     }
     response.data.items = response.data?.items.sort(comparator);
+    console.log('books after sort:', response);
     return response;
   } else if (__ENV__ === Environments.PRODUCTION) {
     const url = generateUrl.getBooksSorted(
