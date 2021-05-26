@@ -14,7 +14,7 @@ const Container = styled.div<{
   width: ${(props) => (props.width ? `${props.width}px` : '200px')};
   padding: ${(props) => (props.padding ? props.padding : null)};
   ${(props) => props.isFocused && 'box-shadow: #d6d6d6 0px 5px 5px 0px;'};
-  cursor: pointer;
+  z-index: 100;
   user-select: none;
   color: var(--search-bar__color);
   font-weight: 600;
@@ -36,6 +36,7 @@ const Dropdown_ = styled.div<{ bgColor?: string; border?: string }>`
   font-size: 0.9em;
   letter-spacing: 1px;
   outline: none;
+  cursor: pointer;
   color: var(--search-bar__color);
 `;
 
@@ -53,6 +54,7 @@ const DropdownItem = styled.div<{ bgColor?: string }>`
   font-size: 0.9em;
   padding: 12px 0px;
   text-transform: capitalize;
+  cursor: pointer;
 `;
 
 const Title = styled.div`

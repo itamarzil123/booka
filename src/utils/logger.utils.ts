@@ -23,30 +23,31 @@ interface ILogger {
   [propName: string]: any;
 }
 
+const validateLoggerState = (logType: LogTypes) => {
+  if (
+    Logger.MOD === OFF ||
+    (logType === LogTypes.API && Logger.OPTIONS.API === OFF) ||
+    (logType === LogTypes.State && Logger.OPTIONS.STATE === OFF)
+  ) {
+    return false;
+  }
+  return true;
+};
 export const logger: ILogger = {
   info: (logType: LogTypes, field: string, more: any): void => {
-    if (
-      Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
-    ) {
+    if (!validateLoggerState(logType)) {
       return;
     }
     console.log('\x1b[32m%s\x1b[0m', '< ' + field + '...>', more);
   },
   warn: (logType: LogTypes, warning: string): void => {
-    if (
-      Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
-    ) {
+    if (!validateLoggerState(logType)) {
       return;
     }
     console.log('\x1b[35m%s\x1b[0m', '< ' + warning + '...>');
   },
   error: (logType: LogTypes, err: any, field?: string): void => {
-    if (
-      Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
-    ) {
+    if (!validateLoggerState(logType)) {
       return;
     }
     console.error(err);
@@ -62,10 +63,7 @@ export const logger: ILogger = {
     }
   },
   success: (logType: LogTypes, operation: string) => {
-    if (
-      Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
-    ) {
+    if (!validateLoggerState(logType)) {
       return;
     }
     console.log(
@@ -74,10 +72,7 @@ export const logger: ILogger = {
     );
   },
   log: (logType: LogTypes, logMsg: any) => {
-    if (
-      Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
-    ) {
+    if (!validateLoggerState(logType)) {
       return;
     }
     console.log(logMsg);

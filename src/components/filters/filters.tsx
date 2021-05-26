@@ -27,6 +27,7 @@ function Filters() {
       case sortByItems[0].title:
         const updatedBooks = await getBooksSorted(
           state.currentSearchBarText,
+          state.books,
           sortByItems[0].title,
           state.bookSearchStartIndex
         );
@@ -38,6 +39,7 @@ function Filters() {
       case sortByItems[1].title:
         const updatedBooks1 = await getBooksSorted(
           state.currentSearchBarText,
+          state.books,
           sortByItems[1].title,
           state.bookSearchStartIndex
         );

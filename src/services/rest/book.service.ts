@@ -130,27 +130,27 @@ export const getBooksByCategory = async (
 
 export const getBooksSorted = async (
   query: string,
+  _books: IBook[],
   strategy: string,
   startIndex: number
 ) => {
-  if (__ENV__ === Environments.TEST) {
-    const response = (await Promise.resolve(books)) as any;
+  if (__ENV__ === Environments.TEST || __ENV__ === Environments.DEVELOPMENT) {
+    const response = (await Promise.resolve(_books)) as any;
     let comparator;
     if (strategy === 'newest') {
       comparator = (firstItem: any, secondItem: any) =>
         firstItem?.volumeInfo?.publishedDate >
         secondItem?.volumeInfo?.publishedDate;
-    } else {
+    } else if (strategy === 'oldest') {
       comparator = (firstItem: any, secondItem: any) =>
         firstItem?.volumeInfo?.publishedDate <
         secondItem?.volumeInfo?.publishedDate;
+    } else if (strategy === 'all') {
+      return response;
     }
     response.data.items = response.data?.items.sort(comparator);
     return response;
-  } else if (
-    __ENV__ === Environments.PRODUCTION ||
-    __ENV__ === Environments.DEVELOPMENT
-  ) {
+  } else if (__ENV__ === Environments.PRODUCTION) {
     const url = generateUrl.getBooksSorted(
       strategy,
       query,
@@ -165,5 +165,7 @@ export const getBooksSorted = async (
     }
     logger.info(LogTypes.API, 'getBooksSorted response', results);
     return results;
+  } else {
+    console.error('Book service. error has occured while sorting.');
   }
 };

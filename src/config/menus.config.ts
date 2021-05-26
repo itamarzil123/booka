@@ -50,7 +50,7 @@ export const sortByItems = [
   },
   {
     id: 2,
-    title: 'relevance'
+    title: 'oldest'
   }
 ];
 
