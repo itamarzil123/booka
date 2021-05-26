@@ -27,7 +27,8 @@ export const logger: ILogger = {
   info: (logType: LogTypes, field: string, more: any): void => {
     if (
       Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
+      logType === LogTypes.API ||
+      Logger.OPTIONS.API === OFF
     ) {
       return;
     }
@@ -36,7 +37,8 @@ export const logger: ILogger = {
   warn: (logType: LogTypes, warning: string): void => {
     if (
       Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
+      logType === LogTypes.API ||
+      Logger.OPTIONS.API === OFF
     ) {
       return;
     }
@@ -45,7 +47,8 @@ export const logger: ILogger = {
   error: (logType: LogTypes, err: any, field?: string): void => {
     if (
       Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
+      logType === LogTypes.API ||
+      Logger.OPTIONS.API === OFF
     ) {
       return;
     }
@@ -64,7 +67,8 @@ export const logger: ILogger = {
   success: (logType: LogTypes, operation: string) => {
     if (
       Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
+      logType === LogTypes.API ||
+      Logger.OPTIONS.API === OFF
     ) {
       return;
     }
@@ -76,7 +80,8 @@ export const logger: ILogger = {
   log: (logType: LogTypes, logMsg: any) => {
     if (
       Logger.MOD === OFF ||
-      (logType === LogTypes.API && Logger.OPTIONS.API === OFF)
+      logType === LogTypes.API ||
+      Logger.OPTIONS.API === OFF
     ) {
       return;
     }
