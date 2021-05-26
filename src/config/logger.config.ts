@@ -3,7 +3,7 @@ export const OFF = 'OFF';
 
 export const Logger = {
   // MOD: ON
-  MOD: ON,
+  MOD: OFF,
   OPTIONS: {
     STATE: OFF,
     API: ON
