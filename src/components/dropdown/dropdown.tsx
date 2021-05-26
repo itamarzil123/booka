@@ -12,6 +12,9 @@ const Container = styled.div<{
   display: flex;
   position: relative;
   width: ${(props) => (props.width ? `${props.width}px` : '200px')};
+  /* height: 60%; */
+  height: 50px;
+
   padding: ${(props) => (props.padding ? props.padding : null)};
   ${(props) => props.isFocused && 'box-shadow: #d6d6d6 0px 5px 5px 0px;'};
   z-index: 100;
@@ -19,6 +22,8 @@ const Container = styled.div<{
   color: var(--search-bar__color);
   font-weight: 600;
   font-family: var(--primary-font-family);
+  /* border: var(--border-light);
+  border-radius: 5px; */
   @media (max-width: 650px) {
     display: none;
   }
@@ -27,12 +32,14 @@ const Container = styled.div<{
 const Dropdown_ = styled.div<{ bgColor?: string; border?: string }>`
   width: 100%;
   border: none;
+  border: ${(props) => (props.border ? props.border : null)};
+
   border-radius: 5px;
   background-color: var(--search-bar__bg);
   background-color: ${(props) => (props.bgColor ? props.bgColor : null)};
-  border: ${(props) => (props.border ? props.border : null)};
   position: absolute;
   padding: 12px 25px;
+  padding: 15px 25px;
   font-size: 0.9em;
   letter-spacing: 1px;
   outline: none;

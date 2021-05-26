@@ -4,7 +4,7 @@ const SearchBarInput = styled.input`
   border: none;
   background-color: var(--search-bar__bg);
   /* height: 70%; */
-  height: 100%;
+  /* height: 100%; */
   padding: var(--filters-padding);
   font-family: var(--primary-font-family);
   font-size: var(--filters-font-size);
