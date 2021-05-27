@@ -46,8 +46,10 @@ body {
 
   --search-bar__color: #000000;
   --filters-font-color: black;
+
   --filters-letter-spacing: 0.05em;
   --filters-padding: 0px 10px;
+
   --input-font__color: rgb(68, 70, 70);
   --footer-bg: #fff4f8;
   --book-margin: 0px 30px;

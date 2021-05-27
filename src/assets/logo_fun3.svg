@@ -15,7 +15,7 @@
    version="1.1"
    id="svg186"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="logo_fun1.svg">
+   sodipodi:docname="logo_fun3.svg">
   <defs
      id="defs180">
     <pattern
@@ -65,7 +65,7 @@
      inkscape:cx="118.14419"
      inkscape:cy="205.77533"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="text280"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
@@ -81,7 +81,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
