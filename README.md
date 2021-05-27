@@ -26,8 +26,8 @@ npm start
 ## AUTHENTICATION:
 
 Only one username and password exists locally (no persistence).
-username: 'username'
-password: 'password'
+username: 'itamar'
+password: 'itamar'
 
 ## STATE_MANAGEMENT:
 

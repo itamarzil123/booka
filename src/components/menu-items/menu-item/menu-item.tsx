@@ -85,7 +85,7 @@ const MenuItemTitle = styled.div<{ isSelected: boolean }>`
 
 type Props = {
   title?: string;
-  icon: any;
+  icon?: any;
   width?: number;
   height?: number;
   transform?: number;
@@ -131,17 +131,19 @@ function MenuItem({
       withUnderline={withUnderline}
       isSelected={selected}
     >
-      {/* <MenuItemIcon
-        isSelected={selected}
-        icon={icon}
-        width={width}
-        height={height}
-        isAbsolute={isAbsolute}
-        top={top}
-        right={right}
-        transform={transform}
-        marginLeft={marginLeft}
-      ></MenuItemIcon> */}
+      {icon && (
+        <MenuItemIcon
+          isSelected={selected}
+          icon={icon}
+          width={width}
+          height={height}
+          isAbsolute={isAbsolute}
+          top={top}
+          right={right}
+          transform={transform}
+          marginLeft={marginLeft}
+        ></MenuItemIcon>
+      )}
       <MenuItemTitle isSelected={selected}>{title}</MenuItemTitle>
       {children}
     </MenuItemContainer>

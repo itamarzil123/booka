@@ -1,4 +1,4 @@
-export const users = [{ username: 'username', password: 'password' }];
+export const users = [{ username: 'itamar', password: 'itamar' }];
 
 export const books = {
   kind: 'books#volumes',

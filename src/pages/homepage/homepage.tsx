@@ -16,8 +16,8 @@ function Homepage() {
   return (
     <Container>
       <Navbar loggedInUser={state?.loggedInUser} />
-      {/* <MainSections /> */}
-      {/* <Footer /> */}
+      <MainSections />
+      <Footer />
     </Container>
   );
 }

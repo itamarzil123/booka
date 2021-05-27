@@ -13,6 +13,7 @@ const MenuItemDropDownContainer = styled.div<{ ref: any }>`
   position: relative;
   margin-left: var(--menu-item-margin);
   margin-bottom: 15px;
+  cursor: pointer;
 `;
 const Popup = styled.div<{ show: boolean }>`
   display: flex;
@@ -31,8 +32,8 @@ const Popup = styled.div<{ show: boolean }>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.3s all;
-  animation: fadein 1s;
+  transition: 0.2s all;
+  animation: fadein 0.3s;
   z-index: 100;
   @keyframes fadein {
     from {
@@ -42,6 +43,11 @@ const Popup = styled.div<{ show: boolean }>`
       opacity: 1;
     }
   }
+`;
+
+const ProfileContainer = styled.div`
+  display: flex;
+  margin-left: 200px;
 `;
 
 type Props = {
@@ -65,22 +71,26 @@ function MenuItemExpand({ setSelectedItem, loggedInUser }: Props) {
 
   return (
     <MenuItemDropDownContainer ref={ref} onClick={onClick}>
-      <Profile
-        username={loggedInUser?.username}
-        userImage={loggedInUser?.image}
-        isEditable={false}
-        profilePhotoSize={40}
-      />
-      <MenuItem
-        withUnderline={false}
-        icon={IMAGES.moreIcon}
-        transform={180}
-        setSelectedItem={setSelectedItem}
-        width={8}
-        height={8}
-        isAbsolute={true}
-        top={-11}
-      />
+      <ProfileContainer>
+        <Profile
+          username={loggedInUser?.username}
+          userImage={loggedInUser?.image}
+          isEditable={false}
+          profilePhotoSize={25}
+        />
+        <MenuItem
+          withUnderline={false}
+          icon={IMAGES.moreIcon}
+          transform={180}
+          setSelectedItem={setSelectedItem}
+          width={8}
+          height={8}
+          isAbsolute={false}
+          top={20}
+          right={-13}
+        />
+      </ProfileContainer>
+
       {
         <Popup show={isComponentVisible}>
           <Logout />

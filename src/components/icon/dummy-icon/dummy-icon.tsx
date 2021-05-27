@@ -34,10 +34,10 @@ const MenuItemIcon = styled.div<{
       ? 'invert(0%) sepia(97%) saturate(0%) hue-rotate(47deg) brightness(99%) contrast(103%);'
       : 'invert(29%) sepia(4%) saturate(16%) hue-rotate(18deg) brightness(96%) contrast(89%);'};
 
-  &:hover {
+  /* &:hover {
     filter: invert(0%) sepia(97%) saturate(0%) hue-rotate(47deg) brightness(99%)
       contrast(103%);
-  }
+  } */
 `;
 type Props = {
   profilePhotoSize: any;

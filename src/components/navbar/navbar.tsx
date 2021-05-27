@@ -81,8 +81,10 @@ const SubmenuItem = styled.div<{ isSelected: boolean }>`
   text-transform: capitalize;
   margin: 0px 15px;
   padding: 5px;
+  border: none;
+
   &:hover {
-    border: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
   }
 `;
 

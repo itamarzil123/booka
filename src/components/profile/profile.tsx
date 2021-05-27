@@ -105,7 +105,7 @@ function Profile({
           width={width}
           height={height}
         >
-          {/* {userImage ? (
+          {userImage ? (
             <Photo
               width={profilePhotoSize}
               height={profilePhotoSize}
@@ -113,7 +113,7 @@ function Profile({
             />
           ) : (
             <DummyIcon profilePhotoSize={profilePhotoSize} />
-          )} */}
+          )}
           <ProfileName>{getUserFullName()}</ProfileName>
         </UserProfileAndName>
       </div>

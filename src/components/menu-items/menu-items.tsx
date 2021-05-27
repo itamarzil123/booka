@@ -57,7 +57,7 @@ function MenuItems({ loggedInUser, hamburgerSelected }: Props) {
       <ItemsContainer hamburgerSelected={hamburgerSelected}>
         <MenuItem
           title="home"
-          icon={IMAGES.homeIcon}
+          // icon={IMAGES.homeIcon}
           width={40}
           height={40}
           selected={selectedItem === 'home'}
@@ -69,7 +69,7 @@ function MenuItems({ loggedInUser, hamburgerSelected }: Props) {
           title="wishlist"
           width={40}
           height={40}
-          icon={IMAGES.wishlistIcon}
+          // icon={IMAGES.wishlistIcon}
           selected={selectedItem === 'wishlist'}
           setSelectedItem={setSelectedItem}
           withUnderline={true}
@@ -80,9 +80,9 @@ function MenuItems({ loggedInUser, hamburgerSelected }: Props) {
 
         <MenuItem
           title="notifications"
-          width={40}
-          height={40}
-          icon={IMAGES.notificationsIcon}
+          width={20}
+          height={20}
+          // icon={IMAGES.notificationsIcon}
           selected={selectedItem === 'notifications'}
           setSelectedItem={setSelectedItem}
           withUnderline={true}
