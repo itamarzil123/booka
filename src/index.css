@@ -29,6 +29,9 @@ body {
   --white: #ffffffff;
   --black: #000000;
   --pink1: #eabcbc;
+  --light-pink: #fef6f6;
+  --grey: #dad6d6;
+
   --grey1: #dad6d6;
   --grey2: #e6e6e6;
   --homepage-bg: #ffffff;
@@ -48,7 +51,7 @@ body {
   --search-bar__color: #000000;
   --filters-font-color: #aca8a8;
 
-  --filters-letter-spacing: 0.05em;
+  --filters-letter-spacing: 0.1em;
   --filters-padding: 0px 10px;
 
   --input-font__color: rgb(68, 70, 70);
@@ -59,7 +62,9 @@ body {
 
   /* FONTS */
   --primary-font-family: 'Roboto', sans-serif;
-  --secondary-font-family: 'Nanum Myeongjo', serif;
+  /* --primary-font-family: 'Noto Sans JP', sans-serif;
+  --primary-font-family: 'Merriweather', serif; */
+  /* --secondary-font-family: 'Nanum Myeongjo', serif; */
   --third-font-family: 'Open Sans', sans-serif;
   --fourth-font-family: 'PT Sans', sans-serif;
 

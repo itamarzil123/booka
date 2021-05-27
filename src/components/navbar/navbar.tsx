@@ -52,6 +52,40 @@ const LogoContainer = styled.div`
   align-items: center;
 `;
 
+const SubmenuContainer = styled.div`
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--box-bg);
+  border: none;
+  border-bottom: var(--box-border__size) solid var(--box-border__color);
+  background-color: var(--light-pink);
+
+  @media (max-width: 650px) {
+    /* display: none; */
+  }
+`;
+
+const Submenu = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const SubmenuItem = styled.div<{ isSelected: boolean }>`
+  font-family: var(--secondary-font-family);
+  font-family: var(--primary-font-family);
+  font-size: 1em;
+  font-weight: ${(props) => (props.isSelected ? '600' : '400')};
+  color: black;
+  cursor: pointer;
+  letter-spacing: var(--menu-item-letter-spacing);
+  text-transform: capitalize;
+  margin: 0px 15px;
+  padding: 5px;
+  &:hover {
+    border: 1px solid var(--grey);
+  }
+`;
+
 type Props = {
   loggedInUser: IUser;
 };
@@ -87,6 +121,20 @@ function Navbar({ loggedInUser }: Props) {
           hamburgerSelected={hamburgerSelected}
         />
       </Container>
+      <SubmenuContainer>
+        <Hamburger
+          hamburgerSelected={hamburgerSelected}
+          setHamburgerSelected={setHamburgerSelected}
+        />
+        <Submenu>
+          <SubmenuItem isSelected={false}>local delivery</SubmenuItem>
+          <SubmenuItem isSelected={false}>customer service</SubmenuItem>
+          <SubmenuItem isSelected={false}>products</SubmenuItem>
+          <SubmenuItem isSelected={false}>solutions</SubmenuItem>
+          <SubmenuItem isSelected={false}></SubmenuItem>
+        </Submenu>
+        <NavbarLeft></NavbarLeft>
+      </SubmenuContainer>
       <ResponsiveContainer show={hamburgerSelected}>
         <ResponsiveItems>
           <ResponsiveItem>menu item</ResponsiveItem>

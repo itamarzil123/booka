@@ -62,6 +62,7 @@ const DropdownItem = styled.div<{ bgColor?: string }>`
 const Title = styled.div`
   text-transform: capitalize;
   color: var(--black);
+  letter-spacing: var(--filters-letter-spacing);
 `;
 
 const Icon = styled.div<{ show: boolean }>`
