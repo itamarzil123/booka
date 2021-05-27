@@ -76,6 +76,7 @@ const MenuItemTitle = styled.div<{ isSelected: boolean }>`
   font-weight: ${(props) => (props.isSelected ? '600' : '400')};
   color: black;
   cursor: pointer;
+  letter-spacing: var(--menu-item-letter-spacing);
   text-transform: capitalize;
   /* &:hover {
     font-weight: 600;

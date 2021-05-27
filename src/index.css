@@ -55,6 +55,7 @@ body {
   --footer-bg: #fff4f8;
   --book-margin: 0px 30px;
   --menu-item-margin: 20px;
+  --menu-item-letter-spacing: 0.1em;
 
   /* FONTS */
   --primary-font-family: 'Roboto', sans-serif;

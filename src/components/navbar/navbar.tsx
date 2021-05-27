@@ -46,6 +46,12 @@ const NavbarLeft = styled.div`
   display: flex;
 `;
 
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 type Props = {
   loggedInUser: IUser;
 };
@@ -62,14 +68,17 @@ function Navbar({ loggedInUser }: Props) {
         />
 
         <NavbarLeft>
-          <Logo
-            width={160}
-            height={56}
-            marginBottom={0}
-            marginLeft={0}
-            text={''}
-            imgUrl={IMAGES.logoWithoutDescription}
-          />
+          <LogoContainer>
+            <Logo
+              width={160}
+              height={50}
+              marginBottom={10}
+              marginLeft={0}
+              text={''}
+              imgUrl={IMAGES.logoWithoutDescription}
+            />
+          </LogoContainer>
+
           <SearchBar loggedInUser={loggedInUser} />
         </NavbarLeft>
 

@@ -21,6 +21,8 @@ const UserProfileAndName = styled.div<{
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
   font-size: var(--menu-item-font-size);
+  font-family: var(--primary-font-family);
+  letter-spacing: var(--menu-item-letter-spacing);
 `;
 
 const ProfileName = styled.div`

@@ -51,10 +51,14 @@ const SearchInputContainer = styled.div`
   display: flex;
   align-items: center;
   /* height: 70%; */
-  border: 1px solid var(--search-bar__border__color);
-  border-radius: 5px;
+  border-bottom: 1px solid var(--search-bar__border__color);
+  /* border-radius: 5px; */
 
   height: var(--filter-px-height);
+`;
+
+const DropdownContainer = styled.div`
+  margin-left: 30px;
 `;
 
 type Props = {
@@ -141,14 +145,15 @@ function SearchBar({ loggedInUser }: Props) {
             <SearchIcon imgUrl={IMAGES.searchIcon} />
           </SearchIconContainer>
         </SearchInputContainer>
-
-        <Dropdown
-          menuItems={categoryItems}
-          padding={'0px 15px'}
-          border={'1px solid black'}
-          title={'categories'}
-          handleDropdownItemSelect={handleDropdownItemSelect}
-        />
+        <DropdownContainer>
+          <Dropdown
+            menuItems={categoryItems}
+            padding={'0px 15px'}
+            border={'1px solid black'}
+            title={'categories'}
+            handleDropdownItemSelect={handleDropdownItemSelect}
+          />
+        </DropdownContainer>
       </SearchBarInputContainer>
     </div>
   );
