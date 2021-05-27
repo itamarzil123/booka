@@ -12,7 +12,7 @@ const Container = styled.div<{
   display: flex;
   position: relative;
   width: ${(props) => (props.width ? `${props.width}px` : '200px')};
-  height: 50px;
+  height: var(--filter-px-height);
   padding: ${(props) => (props.padding ? props.padding : null)};
   ${(props) => props.isFocused && 'box-shadow: #d6d6d6 0px 5px 5px 0px;'};
   z-index: 100;
@@ -34,6 +34,7 @@ const Dropdown_ = styled.div<{ bgColor?: string; border?: string }>`
   background-color: ${(props) => (props.bgColor ? props.bgColor : null)};
   position: absolute;
   padding: 15px 25px;
+  padding: 10px 25px;
   font-size: 0.9em;
   letter-spacing: 1px;
   outline: none;
@@ -60,6 +61,7 @@ const DropdownItem = styled.div<{ bgColor?: string }>`
 
 const Title = styled.div`
   text-transform: capitalize;
+  color: var(--black);
 `;
 
 const Icon = styled.div<{ show: boolean }>`

@@ -54,7 +54,7 @@ const SearchInputContainer = styled.div`
   border: 1px solid var(--search-bar__border__color);
   border-radius: 5px;
 
-  height: 50px;
+  height: var(--filter-px-height);
 `;
 
 type Props = {

@@ -27,6 +27,7 @@ body {
 
 :root {
   --white: #ffffffff;
+  --black: #000000;
   --pink1: #eabcbc;
   --grey1: #dad6d6;
   --grey2: #e6e6e6;
@@ -45,7 +46,7 @@ body {
   --search-bar__border__color: black;
 
   --search-bar__color: #000000;
-  --filters-font-color: black;
+  --filters-font-color: #aca8a8;
 
   --filters-letter-spacing: 0.05em;
   --filters-padding: 0px 10px;
@@ -65,7 +66,8 @@ body {
 
   --filters-font-size: 1em;
   --filters-font-weight: 600;
+  --filter-px-height: 40px;
 
   /* BORDERS */
-  --border-light: 1px solid black;
+  --border-light: 1px solid #aca8a8;
 }

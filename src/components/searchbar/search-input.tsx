@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const SearchBarInput = styled.input`
+  transition: 0.3s all easy;
   border: none;
   background-color: var(--search-bar__bg);
   /* height: 70%; */
@@ -9,13 +10,18 @@ const SearchBarInput = styled.input`
   font-family: var(--primary-font-family);
   font-size: var(--filters-font-size);
   font-weight: var(--filters-font-weight);
-  color: var(--filters-font-color);
+  color: var(--black);
   letter-spacing: var(--filters-letter-spacing);
   outline: none;
   ::placeholder,
   ::-webkit-input-placeholder {
     color: var(--filters-font-color);
   }
+  /* &:focus {
+    outline: none;
+    border: 2px solid rgba(182, 112, 112, 0.4);
+  } */
+
   /* border: 1px solid var(--search-bar__border__color); */
 `;
 

@@ -14,7 +14,7 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   width: 200px;
-  height: 50px;
+  height: var(--filter-px-height);
   margin-bottom: 10px;
   padding: 0px 15px;
   text-transform: uppercase;

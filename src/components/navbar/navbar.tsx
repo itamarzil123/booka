@@ -8,7 +8,7 @@ import Hamburger from '../hamburger/hamburger';
 import { useState } from 'react';
 
 const Container = styled.div`
-  height: 10%;
+  height: 7%;
   display: flex;
   justify-content: space-between;
   background-color: var(--box-bg);
@@ -64,7 +64,7 @@ function Navbar({ loggedInUser }: Props) {
         <NavbarLeft>
           <Logo
             width={160}
-            height={68}
+            height={56}
             marginBottom={0}
             marginLeft={0}
             text={''}
