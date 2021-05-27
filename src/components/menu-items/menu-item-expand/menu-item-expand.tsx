@@ -34,7 +34,6 @@ const Popup = styled.div<{ show: boolean }>`
   align-items: center;
   transition: 0.2s all;
   animation: fadein 0.3s;
-  z-index: 100;
   @keyframes fadein {
     from {
       opacity: 0;

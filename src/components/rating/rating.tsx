@@ -3,7 +3,6 @@ import { IMAGES } from '../../constants/image.constants';
 
 const Container = styled.div`
   display: flex;
-  margin: 30px;
 `;
 
 const RatingIcon = styled.div<{

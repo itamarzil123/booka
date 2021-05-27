@@ -7,6 +7,9 @@ import { IUser } from '../../types/user';
 import Hamburger from '../hamburger/hamburger';
 import { useState } from 'react';
 
+const Header = styled.div`
+  margin-bottom: 60px;
+`;
 const Container = styled.div`
   height: 7%;
   display: flex;
@@ -96,7 +99,7 @@ function Navbar({ loggedInUser }: Props) {
   const [hamburgerSelected, setHamburgerSelected] = useState(false);
 
   return (
-    <>
+    <Header>
       <Container>
         <Hamburger
           hamburgerSelected={hamburgerSelected}
@@ -144,7 +147,7 @@ function Navbar({ loggedInUser }: Props) {
           <ResponsiveItem>menu item</ResponsiveItem>
         </ResponsiveItems>
       </ResponsiveContainer>
-    </>
+    </Header>
   );
 }
 

@@ -64,10 +64,10 @@ body {
   --primary-font-family: 'Roboto', sans-serif;
   /* --primary-font-family: 'Noto Sans JP', sans-serif;
   --primary-font-family: 'Merriweather', serif; */
-  /* --secondary-font-family: 'Nanum Myeongjo', serif; */
+  --secondary-font-family: 'Nanum Myeongjo', serif;
   --third-font-family: 'Open Sans', sans-serif;
   --fourth-font-family: 'PT Sans', sans-serif;
-
+  --fifth-font-family: 'Oxygen', sans-serif;
   --menu-item-font-size: 1em;
 
   --filters-font-size: 1em;

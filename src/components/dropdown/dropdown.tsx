@@ -15,7 +15,7 @@ const Container = styled.div<{
   height: var(--filter-px-height);
   padding: ${(props) => (props.padding ? props.padding : null)};
   ${(props) => props.isFocused && 'box-shadow: #d6d6d6 0px 5px 5px 0px;'};
-  z-index: 100;
+  /* z-index: 1; */
   user-select: none;
   color: var(--search-bar__color);
   font-weight: 600;

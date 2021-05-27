@@ -9,10 +9,14 @@ import Rating from '../rating/rating';
 
 const Container = styled.div`
   width: 290px;
-  height: 350px;
-  margin: var(--book-margin);
+  height: 750px;
+  /* width: 186px;
+  height: 253px; */
+  margin: var(--book-margin) 80px;
   cursor: pointer;
   border: none;
+  border-bottom: 1px solid #d8d2d2;
+
   padding: 25px;
   @media (max-width: 650px) {
     width: 80%;
@@ -21,8 +25,8 @@ const Container = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 190px;
-  height: 370px;
+  width: 300px;
+  height: 200px;
   @media (max-width: 650px) {
     width: 80%;
     height: 700px;
@@ -66,7 +70,6 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   font-family: var(--primary-font-family);
-  height: 100px;
   width: 100%;
   overflow: hidden;
 `;
@@ -74,9 +77,12 @@ const Description = styled.div`
   padding: 5px;
 `;
 const Title = styled.div`
-  font-size: 0.8em;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-family: var(--secondary-font-family);
+  font-family: var(---third-font-family);
+  font-family: var(--fifth-font-family);
+  font-size: 16px;
+  /* font-weight: 600; */
+  /* letter-spacing: 0.1em; */
   margin-bottom: 5px;
 `;
 
@@ -89,6 +95,7 @@ const Author = styled.div`
 const ModalBookTitle = styled.div`
   display: flex;
   justify-content: center;
+  font-family: var(--primary-font-family);
   font-size: 1.5em;
   margin-bottom: 35px;
   @media (max-width: 650px) {
@@ -155,6 +162,7 @@ const AddToWishListButton = styled.div`
   background-color: #fbf3f3;
   width: 300px;
   height: 50px;
+
   margin: 15px;
   cursor: pointer;
   @media (max-width: 650px) {
@@ -185,9 +193,10 @@ const ModalButtons = styled.div`
   }
 `;
 
-const RatingContainer = styled.div`
+const RatingContainer = styled.div<{ margin?: number; left?: any }>`
   display: flex;
-  justify-content: center;
+  justify-content: ${(props) => (!props.left ? 'center' : 'flex-start')};
+  margin-top: ${(props) => (props.margin ? `${props.margin}px` : null)};
 `;
 
 const BookKind = styled.div`
@@ -235,8 +244,8 @@ function Book({ book }: Props) {
       <Container key={book?.id} onClick={handleOpenModal}>
         <Image
           imgUrl={book?.volumeInfo?.imageLinks?.thumbnail}
-          width={100}
-          height={80}
+          width={80}
+          height={45}
         />
         <Details>
           <Description>
@@ -251,6 +260,9 @@ function Book({ book }: Props) {
             <BookKind>{book?.saleInfo?.saleability}</BookKind>
             <BookKind> {book?.saleInfo?.isEbook && 'Format: Ebook'}</BookKind>
             <BookKind></BookKind>
+            <RatingContainer margin={30} left>
+              <Rating rating={4} />
+            </RatingContainer>
           </Description>
         </Details>
       </Container>
@@ -265,7 +277,7 @@ function Book({ book }: Props) {
             <Image
               imgUrl={book?.volumeInfo?.imageLinks?.thumbnail}
               width={80}
-              height={50}
+              height={100}
             />
           </ImageContainer>
           <ModalContentDetails>
