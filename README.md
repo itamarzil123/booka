@@ -1,6 +1,8 @@
 ## ABOUT:
 
-a React search component with pagination and caching (React-Query), using the google books api (YUP. terrible choice).
+A Simple React application with a search component, pagination, caching, filters.
+experimental state management with Context API (Yes. bad choice) 
+
 
 ## APP_CONFIGURATION:
 
