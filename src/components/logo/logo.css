@@ -1,6 +1,7 @@
 .logo-image__container {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .logo-description {

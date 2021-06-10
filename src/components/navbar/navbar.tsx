@@ -62,8 +62,8 @@ const SubmenuContainer = styled.div`
   background-color: var(--box-bg);
   border: none;
   border-bottom: var(--box-border__size) solid var(--box-border__color);
-  background-color: var(--light-pink);
-
+  background-color: white;
+  padding: 10px;
   @media (max-width: 650px) {
     /* display: none; */
   }
@@ -74,8 +74,7 @@ const Submenu = styled.div`
   align-items: center;
 `;
 const SubmenuItem = styled.div<{ isSelected: boolean }>`
-  font-family: var(--secondary-font-family);
-  font-family: var(--seven-font-family);
+  font-family: var(--primary-font-family);
   font-size: 1em;
   font-weight: ${(props) => (props.isSelected ? '600' : '400')};
   color: black;
@@ -87,7 +86,7 @@ const SubmenuItem = styled.div<{ isSelected: boolean }>`
   border: none;
 
   &:hover {
-    border-bottom: 1px solid var(--grey);
+    color: #522f2f;
   }
 `;
 
@@ -126,7 +125,7 @@ function Navbar({ loggedInUser }: Props) {
           hamburgerSelected={hamburgerSelected}
         />
       </Container>
-      {/* <SubmenuContainer>
+      <SubmenuContainer>
         <Hamburger
           hamburgerSelected={hamburgerSelected}
           setHamburgerSelected={setHamburgerSelected}
@@ -139,7 +138,7 @@ function Navbar({ loggedInUser }: Props) {
           <SubmenuItem isSelected={false}></SubmenuItem>
         </Submenu>
         <NavbarLeft></NavbarLeft>
-      </SubmenuContainer> */}
+      </SubmenuContainer>
       <ResponsiveContainer show={hamburgerSelected}>
         <ResponsiveItems>
           <ResponsiveItem>menu item</ResponsiveItem>

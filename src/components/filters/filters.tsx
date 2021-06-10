@@ -14,6 +14,8 @@ import {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: #fff0f0;
+  padding: 48px;
   @media (max-width: 650px) {
     display: none;
   }
