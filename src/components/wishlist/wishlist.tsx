@@ -17,7 +17,6 @@ function Wishlist() {
     onCompleted: () => {},
     onError: () => {}
   });
-  console.log('wishlist:', wishListBooks);
   return (
     <Container>
       {wishListBooks &&
