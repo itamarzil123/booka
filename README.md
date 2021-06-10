@@ -1,6 +1,6 @@
 ## ABOUT:
 
-a React search component with pagination and caching (React-Query), using the google books api.
+a React search component with pagination and caching (React-Query), using the google books api (YUP. terrible choice).
 
 ## APP_CONFIGURATION:
 
@@ -27,7 +27,7 @@ password: 'itamar'
 
 ## STATE_MANAGEMENT:
 
-React Context API
+React Context API (YUP. terrible choice)
 
 ## STORAGE:
 
