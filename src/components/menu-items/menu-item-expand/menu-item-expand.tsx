@@ -6,6 +6,7 @@ import useComponentVisible from '../../../hooks/use-component-visible';
 import Profile from '../../profile/profile';
 import { SyntheticEvent } from 'react';
 import { IUser } from '../../../types/user';
+import Popup from '../../popup/popup';
 
 const MenuItemDropDownContainer = styled.div<{ ref: any }>`
   display: flex;
@@ -15,38 +16,37 @@ const MenuItemDropDownContainer = styled.div<{ ref: any }>`
   margin-bottom: 15px;
   cursor: pointer;
 `;
-const Popup = styled.div<{ show: boolean }>`
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  /* top: 0px; */
-  right: 0px;
-  width: 130px;
-  height: 100px;
-  margin: 40px 0;
-  display: ${(props) => (props.show ? 'flex' : 'none')};
-  /* box-shadow: 0 0 4px #666; */
-  border: var(--border-light);
-  background-color: var(--white);
-  color: #161313;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.2s all;
-  animation: fadein 0.3s;
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-`;
 
 const ProfileContainer = styled.div`
   display: flex;
   margin-left: 200px;
+`;
+
+const PopupItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  /* margin: 10px 5px; */
+  /* margin-left: 10px; */
+  height: 40px;
+  width: 100%;
+  &:hover {
+    background-color: var(--light-grey);
+  }
+  cursor: pointer;
+`;
+const PopupItem = styled.div`
+  /* width: 100%; */
+  margin-left: 10px;
+  font-size: var(--small-text);
+  font-family: var(--primary-font-family);
+  font-family: var(--fourth-font-family);
+  font-weight: 600;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  &:hover {
+    color: #ad8a90;
+  }
 `;
 
 type Props = {
@@ -93,7 +93,17 @@ function MenuItemExpand({ setSelectedItem, loggedInUser }: Props) {
 
       {
         <Popup show={isComponentVisible}>
-          <Logout />
+          <PopupItemContainer>
+            <PopupItem onClick={() => {}}>My Account</PopupItem>
+          </PopupItemContainer>
+          <PopupItemContainer>
+            <PopupItem onClick={() => {}}>My Orders</PopupItem>
+          </PopupItemContainer>
+          <PopupItemContainer>
+            <PopupItem onClick={() => {}}>
+              <Logout />
+            </PopupItem>
+          </PopupItemContainer>
         </Popup>
       }
     </MenuItemDropDownContainer>

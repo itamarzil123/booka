@@ -20,11 +20,7 @@ function Logout() {
     }
   };
   if (!isLoggedOut) {
-    return (
-      <div className="logout-btn" onClick={handleLogout}>
-        Logout
-      </div>
-    );
+    return <div onClick={handleLogout}>Logout</div>;
   } else {
     return <Redirect to={Routes.HOME} />;
   }

@@ -9,15 +9,25 @@ import Rating from '../rating/rating';
 
 const Container = styled.div`
   width: 290px;
-  height: 750px;
-  /* width: 186px;
-  height: 253px; */
+  height: 450px;
+  padding: 25px;
   margin: var(--book-margin) 80px;
   cursor: pointer;
   border: none;
-  border-bottom: 1px solid #d8d2d2;
-
-  padding: 25px;
+  border: 1px solid #d8d2d2;
+  border: 16px solid transparent;
+  border-image: 104
+    repeating-linear-gradient(
+      -45deg,
+      white 0,
+      #ff9f9f 1em,
+      transparent 0,
+      transparent 2em,
+      #000 0,
+      #f00 3em,
+      transparent 0,
+      transparent 4em
+    );
   @media (max-width: 650px) {
     width: 80%;
     height: 700px;
@@ -245,7 +255,7 @@ function Book({ book }: Props) {
         <Image
           imgUrl={book?.volumeInfo?.imageLinks?.thumbnail}
           width={80}
-          height={45}
+          height={50}
         />
         <Details>
           <Description>
