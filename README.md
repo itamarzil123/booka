@@ -1,7 +1,3 @@
-## watch LIVE at:
-
-https://goofy-swirles-cdb887.netlify.app/
-
 ## ABOUT:
 
 a React search component with pagination and caching (React-Query), using the google books api.
