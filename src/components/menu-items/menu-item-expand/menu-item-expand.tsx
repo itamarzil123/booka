@@ -75,7 +75,8 @@ function MenuItemExpand({ setSelectedItem, loggedInUser }: Props) {
           username={loggedInUser?.username}
           userImage={loggedInUser?.image}
           isEditable={false}
-          profilePhotoSize={25}
+          width={30}
+          height={40}
         />
         <MenuItem
           withUnderline={false}

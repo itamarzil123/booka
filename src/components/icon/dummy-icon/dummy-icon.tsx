@@ -40,15 +40,12 @@ const MenuItemIcon = styled.div<{
   } */
 `;
 type Props = {
-  profilePhotoSize: any;
+  width: number;
+  height: number;
 };
-function DummyIcon({ profilePhotoSize }: Props) {
+function DummyIcon({ width, height }: Props) {
   return (
-    <MenuItemIcon
-      icon={IMAGES.avatarIcon}
-      width={profilePhotoSize}
-      height={profilePhotoSize}
-    />
+    <MenuItemIcon icon={IMAGES.avatarIcon} width={width} height={height} />
   );
 }
 

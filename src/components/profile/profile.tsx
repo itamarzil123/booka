@@ -14,7 +14,6 @@ const Photo = styled.img<{ width?: number; height?: number }>`
 `;
 
 const UserProfileAndName = styled.div<{
-  profilePhotoSize: any;
   width?: number;
   height?: number;
 }>`
@@ -37,18 +36,10 @@ type Props = {
   username: string | undefined;
   userImage: any;
   isEditable: boolean;
-  profilePhotoSize: any;
-  width?: number;
-  height?: number;
+  width: number;
+  height: number;
 };
-function Profile({
-  username,
-  userImage,
-  isEditable,
-  profilePhotoSize,
-  width,
-  height
-}: Props) {
+function Profile({ username, userImage, isEditable, width, height }: Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [image, setImage] = useState('');
   const [isFocused, setIsFocused] = useState(false);
@@ -99,20 +90,15 @@ function Profile({
     <>
       <div className="profile-container">
         <UserProfileAndName
-          profilePhotoSize={profilePhotoSize}
           className="user-profile-and-name"
           onClick={isEditable ? handleProfileEdit : undefined}
           width={width}
           height={height}
         >
           {userImage ? (
-            <Photo
-              width={profilePhotoSize}
-              height={profilePhotoSize}
-              src={userImage}
-            />
+            <Photo width={width} height={height} src={userImage} />
           ) : (
-            <DummyIcon profilePhotoSize={profilePhotoSize} />
+            <DummyIcon width={width} height={height} />
           )}
           <ProfileName>{getUserFullName()}</ProfileName>
         </UserProfileAndName>

@@ -12,7 +12,6 @@ import {
   WRONG_CREDENTIALS
 } from '../../../constants/errors.constants';
 import { Routes } from '../../../router/router.config';
-import Footer from '../../../components/footer/footer';
 import Logo from '../../../components/logo/logo';
 import { logger, LogTypes } from '../../../utils/logger.utils';
 import { useInput } from '../../hooks/use-input';

@@ -75,7 +75,7 @@ const Submenu = styled.div`
 `;
 const SubmenuItem = styled.div<{ isSelected: boolean }>`
   font-family: var(--secondary-font-family);
-  font-family: var(--primary-font-family);
+  font-family: var(--seven-font-family);
   font-size: 1em;
   font-weight: ${(props) => (props.isSelected ? '600' : '400')};
   color: black;
@@ -109,8 +109,8 @@ function Navbar({ loggedInUser }: Props) {
         <NavbarLeft>
           <LogoContainer>
             <Logo
-              width={160}
-              height={50}
+              width={195}
+              height={66}
               marginBottom={10}
               marginLeft={0}
               text={''}
@@ -126,7 +126,7 @@ function Navbar({ loggedInUser }: Props) {
           hamburgerSelected={hamburgerSelected}
         />
       </Container>
-      <SubmenuContainer>
+      {/* <SubmenuContainer>
         <Hamburger
           hamburgerSelected={hamburgerSelected}
           setHamburgerSelected={setHamburgerSelected}
@@ -139,7 +139,7 @@ function Navbar({ loggedInUser }: Props) {
           <SubmenuItem isSelected={false}></SubmenuItem>
         </Submenu>
         <NavbarLeft></NavbarLeft>
-      </SubmenuContainer>
+      </SubmenuContainer> */}
       <ResponsiveContainer show={hamburgerSelected}>
         <ResponsiveItems>
           <ResponsiveItem>menu item</ResponsiveItem>
